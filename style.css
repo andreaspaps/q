@@ -96,10 +96,6 @@ body, html {
     padding: 20px;
 }
 
-.google-play-badge {
-    font-size: 150px;
-}
-
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hero {
@@ -117,7 +113,7 @@ body, html {
     .hero-image {
         position: absolute; /* Change to relative positioning */
         width: auto; /* Adjust to full width of the hero section */
-        padding-top: 300px;
+        margin-top: 300px;
         padding-left: 170px;
         scale: 90%; /* Ensure the image covers the full height of its container */
     }
@@ -125,7 +121,7 @@ body, html {
     .features {
         padding: 20px;
         background: transparent; /* Ensures background transparency */
-        margin-top: 260px; /* Add margin to the top */
+        margin-top: 300px; /* Add margin to the top */
     }
 
     .features .container {
@@ -145,9 +141,7 @@ body, html {
     margin-bottom: 30px;
     }
 
-    .google-play-badge {
-    font-size: 150px;
-    }
+    .ba
 }
 
 /* Header */
