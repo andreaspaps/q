@@ -13,7 +13,7 @@ body, html {
 .hero {
     position: relative;
     display: flex;
-    height: 60vh; /* Adjusted to 50% of viewport height */
+    height: 80vh; /* Adjusted to 50% of viewport height */
 }
 
 .hero-part {
