@@ -79,7 +79,7 @@ body, html {
 
 .feature {
     padding: 20px;
-    font-size: 16px;
+    font-size: 18px;
     color: white; /* Ensures the text is white */
     align-items: flex-start; /* Aligns the icon and text vertically */
 }
@@ -99,6 +99,7 @@ body, html {
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hero {
+        margin-top: -80px;
         height: 100vh; /* Revert to full viewport height on smaller screens */
         flex-direction: column; /* Stack hero parts vertically on smaller screens */
     }
@@ -118,19 +119,22 @@ body, html {
     }
  
     .features {
-        padding: 30px;
+        padding: 20px;
         background: transparent; /* Ensures background transparency */
         margin-top: 260px; /* Add margin to the top */
-        margin-right: 30px;
     }
 
     .features .container {
         grid-template-columns: 1fr; /* Stacks the features vertically on smaller screens */
     }
 
+    .feature {
+        font-size: 18px;
+    }
+
     .feature-icon {
-    font-size: 2em; /* Adjust the font size to enlarge the icons */
-    padding: 10px;
+        font-size: 2em; /* Adjust the font size to enlarge the icons */
+        padding: 10px;
     }
 }
 
