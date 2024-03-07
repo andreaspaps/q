@@ -1,0 +1,158 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white; /* Ensure text is white */
+    background-color: black; /* Background color set to black */
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    height: 60vh; /* Adjusted to 50% of viewport height */
+}
+
+.hero-part {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.hero-text {
+    font-size: 44px;
+    padding-left: 150px; /* Padding for text spacing */
+    text-align: left; /* Align text to the left */
+    animation: fadeIn 3s ease; /* Apply animation effect */
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(0); /* Slide in to the left */
+    }
+}
+
+.hero-image {
+    margin-left: -150px;
+    position: absolute;
+    height: 100%;
+    width: auto;
+    animation: slideInRightBounce 1s forwards;
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /* Ensure the image covers the container */
+}
+
+/* Features Section */
+.features {
+    padding-Top: 30px;
+    padding-left: 120px;
+    padding-Right: 120px;
+    background: transparent; /* Ensures background transparency */
+    margin-top: 20px; /* Add margin to the top */
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3x2 grid */
+    gap: 20px; /* Space between grid items */
+}
+
+.feature {
+    padding: 20px;
+    font-size: 16px;
+    color: white; /* Ensures the text is white */
+    align-items: flex-start; /* Aligns the icon and text vertically */
+}
+
+#animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.feature-icon {
+    font-size: 3em; /* Adjust the font size to enlarge the icons */
+    padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 100vh; /* Revert to full viewport height on smaller screens */
+        flex-direction: column; /* Stack hero parts vertically on smaller screens */
+    }
+
+    .hero-text {
+        padding: 0 20px; /* Padding for text spacing */
+        text-align: center;
+        font-size: 34px;
+    }
+
+    .hero-image {
+        position: absolute; /* Change to relative positioning */
+        width: auto; /* Adjust to full width of the hero section */
+        padding-top: 250px;
+        padding-left: 170px;
+        scale: 90%; /* Ensure the image covers the full height of its container */
+    }
+ 
+    .features {
+        padding: 30px;
+        background: transparent; /* Ensures background transparency */
+        margin-top: 260px; /* Add margin to the top */
+        margin-right: 30px;
+    }
+
+    .features .container {
+        grid-template-columns: 1fr; /* Stacks the features vertically on smaller screens */
+    }
+
+    .feature-icon {
+    font-size: 2em; /* Adjust the font size to enlarge the icons */
+    padding: 10px;
+    }
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    color: white; /* Text color */
+}
+
+.logo img {
+    width: 45px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.menu-toggle {
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 35px;
+    margin-top: -20px;
+    margin-right: 0px;
+
+}
