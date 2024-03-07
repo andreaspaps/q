@@ -96,6 +96,22 @@ body, html {
     padding: 20px;
 }
 
+.about {
+    text-align: center; /* Center align the content */
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about .container {
+    max-width: 60%; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.container p {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hero {
@@ -141,7 +157,20 @@ body, html {
     margin-bottom: 30px;
     }
 
-    .ba
+    .about {
+    text-align: center; /* Center align the content */
+    margin-top: 30px;
+    margin-bottom: 80px;
+    }
+
+    .about .container {
+    max-width: 80%; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    }
+
+    .container p {
+    font-size: 18px; /* Adjust the font size as needed */
+    }
 }
 
 /* Header */
@@ -175,4 +204,3 @@ footer .privacy-link {
     font-size: 20px;
     padding: 20px;
 }
-
