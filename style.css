@@ -96,6 +96,10 @@ body, html {
     padding: 20px;
 }
 
+.google-play-badge {
+    font-size: 150px;
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hero {
@@ -107,13 +111,13 @@ body, html {
     .hero-text {
         padding: 0 20px; /* Padding for text spacing */
         text-align: center;
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .hero-image {
         position: absolute; /* Change to relative positioning */
         width: auto; /* Adjust to full width of the hero section */
-        padding-top: 250px;
+        padding-top: 300px;
         padding-left: 170px;
         scale: 90%; /* Ensure the image covers the full height of its container */
     }
@@ -135,6 +139,14 @@ body, html {
     .feature-icon {
         font-size: 2em; /* Adjust the font size to enlarge the icons */
         padding: 0px;
+    }
+
+    .header {
+    margin-bottom: 30px;
+    }
+
+    .google-play-badge {
+    font-size: 150px;
     }
 }
 
@@ -158,5 +170,4 @@ body, html {
     font-size: 35px;
     margin-top: -20px;
     margin-right: 0px;
-
 }
