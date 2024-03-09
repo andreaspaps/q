@@ -33,7 +33,7 @@ function drawLetter() {
   for (let i = 0; i < 5; i++) {
     const x = Math.floor(Math.random() * canvas.width);
     const y = Math.floor(Math.random() * canvas.height);
-    const size = Math.floor(Math.random() * 30) + 5;
+    const size = Math.floor(Math.random() * 30) + 10;
     const speed = size / 20;
     const opacity = Math.random() * 1 + 0.7;
     const color = "rgba(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + opacity + ")";
@@ -53,7 +53,7 @@ function drawLetter() {
   }
 }
 
-setInterval(drawLetter, 50);
+setInterval(drawLetter, 40);
 
 function updateLetters() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -79,4 +79,4 @@ function updateLetters() {
     }
   }
 }
-setInterval(updateLetters, 50);
+setInterval(updateLetters, 40);
