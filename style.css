@@ -4,23 +4,32 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    color: white; /* Ensure text is white */
-    background-color: black; /* Background color set to black */
-    font-family: Arial, sans-serif; /* Example font */
+    color: white;
+    background: transparent;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  background-color: black;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
+    background: transparent; 
+    position: relative;
     display: flex;
-    height: 80vh; /* Adjusted to 50% of viewport height */
+    height: 80vh;
+    z-index: 1;
 }
 
 .hero-part {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 @keyframes fadeIn {
@@ -34,26 +43,53 @@ body, html {
 
 .hero-text {
     font-size: 44px;
-    padding-left: 150px; /* Padding for text spacing */
-    text-align: left; /* Align text to the left */
-    animation: fadeIn 1s ease; /* Apply animation effect */
+    padding-left: 150px;
+    text-align: left;
+    animation: fadeIn 1s ease;
+    height: 600px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide overflow */
 }
 
-@keyframes slideInRight {
+#store {
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+    animation-delay: 1.5s; /* Delay the animation by 3 seconds */
+}
+
+@keyframes slideZoomBounce {
     0% {
-        transform: translateX(100%); /* Start off-screen to the right */
+        transform: translateX(-100%) scale(0);
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(5%) scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(0) scale(1.1);
+        opacity: 1;
+    }
+    65% {
+        transform: translateX(-2%) scale(0.95);
+    }
+    75% {
+        transform: translateX(1%) scale(1.05);
+    }
+    85% {
+        transform: translateX(-0.5%) scale(0.98);
     }
     100% {
-        transform: translateX(0); /* Slide in to the left */
+        transform: translateX(0) scale(1);
     }
 }
 
 .hero-image {
-    margin-left: -150px;
-    position: absolute;
+    position: relative;
+    z-index: 1;
+    margin-left: 100px;
     height: 100%;
     width: auto;
-    animation: slideInRightBounce 1s forwards;
+    animation: slideZoomBounce 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
 
 .hero-image img {
@@ -64,11 +100,12 @@ body, html {
 
 /* Features Section */
 .features {
-    padding-Top: 30px;
+    position: afixed;
+    padding-Top: 50px;
     padding-left: 120px;
     padding-Right: 120px;
-    background: transparent; /* Ensures background transparency */
-    margin-top: 20px; /* Add margin to the top */
+    background-color: black; 
+    
 }
 
 .features .container {
@@ -78,66 +115,78 @@ body, html {
 }
 
 .feature {
-    padding: 20px;
+    padding: 20px;background-color: black;
     font-size: 18px;
     color: white; /* Ensures the text is white */
-    align-items: flex-start; /* Aligns the icon and text vertically */
+}
+
+.content-container {
+    position: relative;
 }
 
 #animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101.5%;
+    z-index: -1;
+    background-color: black;
 }
 
 .feature-icon {
-    font-size: 3em; /* Adjust the font size to enlarge the icons */
+    font-size: 3em;
     padding: 20px;
 }
 
 .about {
-    text-align: center; /* Center align the content */
+    text-align: center;
     margin-top: 80px;
     margin-bottom: 80px;
+    background-color: black;
 }
 
 .about .container {
-    max-width: 60%; /* Adjust maximum width as needed */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 60%;
+    margin: 0 auto;
 }
 
 .container p {
-    font-size: 24px; /* Adjust the font size as needed */
+    font-size: 24px;
 }
-
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hero {
-        margin-top: -80px;
+        top: 0px;
         height: 100vh; /* Revert to full viewport height on smaller screens */
         flex-direction: column; /* Stack hero parts vertically on smaller screens */
     }
 
     .hero-text {
-        padding: 0 20px; /* Padding for text spacing */
+        padding: 0 30px; /* Padding for text spacing */
         text-align: center;
-        font-size: 32px;
+        font-size: 30px;
+        height: 350px; /* Adjust the height as needed */
+        overflow: hidden; /* Hide overflow */
     }
 
     .hero-image {
-        position: absolute; /* Change to relative positioning */
-        width: auto; /* Adjust to full width of the hero section */
-        margin-top: 300px;
-        padding-left: 170px;
-        scale: 90%; /* Ensure the image covers the full height of its container */
+        position: relative;
+        margin-top: -70px;
+        margin-left: 0; /* Remove left margin */
+        position: relative; /* Change to relative positioning */
+        height: auto; /* Adjust height */
+        width: 100%; /* Adjust width */
+        text-align: center; /* Center the image horizontally */
+        scale: 70%;
     }
- 
+    
     .features {
+        margin-top: 15vh;
         padding: 20px;
         background: transparent; /* Ensures background transparency */
-        margin-top: 300px; /* Add margin to the top */
+        
     }
 
     .features .container {
@@ -197,10 +246,58 @@ body, html {
 
 footer {
     text-align: center;
+    background-color: black;
 }
 
 footer .privacy-link {
     color: white;
     font-size: 20px;
     padding: 20px;
+}
+
+/* Responsive Adjustments for Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Hero Section */
+    .hero {
+        display: grid; /* Change display to grid */
+        grid-template-columns: 1fr 1fr; /* Set two columns */
+        height: 50vh; /* Adjusted height for better visibility */
+    }
+
+    .hero-text {
+        margin-top: 80px;
+        margin-left: 70px;
+        font-size: 30px; /* Decreased font size for better readability */
+        padding: 0px; /* Adjusted padding for better spacing */
+        text-align: left; /* Center align text for better presentation */
+    }
+
+    .hero-image {
+        margin-right: 50px;
+        position: absolute; /* Adjust position for better alignment */
+        scale: 80%;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 30px; /* Adjusted padding for better spacing */
+        margin-top: 10px; /* Increased margin for better separation */
+    }
+
+    .features .container {
+        grid-template-columns: repeat(2, 1fr); /* Adjusted grid for better layout */
+    }
+
+    .feature {
+        font-size: 16px; /* Decreased font size for better readability */
+    }
+
+    /* About Section */
+    .about .container {
+        max-width: 80%; /* Adjusted maximum width for better readability */
+    }
+
+    .container p {
+        font-size: 20px; /* Adjusted font size for better readability */
+    }
 }
