@@ -307,34 +307,18 @@ footer .privacy-link {
         font-size: 20px; /* Adjusted font size for better readability */
     }
 
-    body {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-  }
-
-  /* Show scrollbar when scrolling */
-  body::-webkit-scrollbar {
-    display: none;
-  }
 }
 
-/* Hide the default scrollbar */
-::-webkit-scrollbar {
-  width: 8px; /* Set the width of the scrollbar */
+/* Hide scrollbar */
+body {
+  overflow: auto;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: black; /* Color of the scrollbar track */
+/* Show scrollbar when scrolling */
+body::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar width */
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar handle */
-  border-radius: 4px; /* Round the corners of the scrollbar handle */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Change color of the scrollbar handle on hover */
+body::-webkit-scrollbar-track {
+  background: transparent; /* Set scrollbar track color */
 }
