@@ -46,7 +46,7 @@ body, html {
 #store {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.3s;
 }
 
 @keyframes slideZoomBounce {
@@ -82,7 +82,7 @@ body, html {
     margin-left: 100px;
     height: 100%;
     width: auto;
-    animation: slideZoomBounce 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    animation: slideZoomBounce 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
 
 .hero-image img {
