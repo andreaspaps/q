@@ -7,7 +7,6 @@
     <title>Q - Voice AI Chatbot</title>
     <meta name="description" content="Experience the future of conversational AI with Q. Download now and embark on a journey of personalized and immersive conversations.">
     <meta name="keywords" content="ai chatbot, voice chatbot, ai companion">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- Open Graph Meta Tags -->
@@ -33,15 +32,16 @@
 </script>
 </head>
 <body>
+    <div class="content-container">
+    <canvas id="animation"></canvas>
     <header class="header">
         <div class="logo"><img src="./logo-192x192.png" alt="Logo"></div>
         <div class="menu-toggle">☰</div>
     </header>
     <section class="hero">
-        <canvas id="animation"></canvas>
         <div class="hero-part">
             <div class="hero-text">
-                <h1>Meet Q, your ultimate voice AI chatbot!</h1>
+                <h1 id="typing-text"></h1>
                 <div id="store"><a href="https://play.google.com/store/apps/details?id=myappid">
         <img src="google-play-badge.svg" alt="Get it on Google Play" width="200" height="60">
       </a></div>
@@ -52,25 +52,25 @@
                 <img src="your-hero-image.png" alt="Hero Image">
             </div>
         </div>
-    </section>   
+    </section>      
     <section class="features">
         <div class="container">
-            <div class="feature animate__animated animate__fadeInUp">
+            <div class="feature">
                 <i class="fas fa-brain feature-icon"></i> <h2>Customizable Persona</h2> Shape Q's personality to mirror your preferred style or character, ensuring each interaction is uniquely tailored to your style.
             </div>
-            <div class="feature animate__animated animate__fadeInUp">
+            <div class="feature">
                 <i class="fas fa-comments feature-icon"></i> <h2>Instant Voice Conversation</h2> Dive into epic conversations with Q's instant voice recognition and natural voice synthesis, offering a truly immersive talking experience.
             </div>
-            <div class="feature animate__animated animate__fadeInUp">
+            <div class="feature">
                 <i class="fas fa-image feature-icon"></i> <h2>Image Generation</h2> Let Q bring your words to life with instant images generation or simply enjoy Q’s automatically generated images that complement your chat.
             </div>
-            <div class="feature animate__animated animate__fadeInUp">
+            <div class="feature">
                 <i class="fas fa-expand feature-icon"></i> <h2>Image Recognition</h2> Snap a photo and explore Q’s state-of-the-art computer vision. Q describes what's in the pic and analyzes the deeper context and meaning.
             </div>
-            <div class="feature animate__animated animate__fadeInUp">
+            <div class="feature">
                 <i class="fas fa-dragon feature-icon"></i> <h2>Interactive Storytelling</h2> Immerse yourself in interactive storytelling adventures where your decisions influence the plot, offering a custom narrative experience.
             </div>
-            <div class="feature animate__animated animate__fadeInUp">
+            <div class="feature">
                 <i class="fas fa-credit-card feature-icon"></i> <h2>No Subscriptions</h2> You only pay for OpenAI's API usage pay-as-you-go style at lowest rates. Unlimited free image generation and voice synthesis.
             </div>
         </div>
@@ -83,6 +83,22 @@
     <footer>
         <a href="./privacy.html" class="privacy-link">Privacy Policy - How To Use</a>
     </footer>
+    </div>
     <script type="text/javascript" charset="utf-8" src="./animation.js"></script>
+    <script>
+        const textElement = document.getElementById('typing-text');
+        const text = "Meet Q, your ultimate voice AI chatbot!";
+        let currentIndex = 0;
+
+        function typeNextLetter() {
+            if (currentIndex < text.length) {
+                textElement.textContent += text[currentIndex];
+                currentIndex++;
+                setTimeout(typeNextLetter, 40); // Adjust the delay as needed
+            }
+        }
+
+        typeNextLetter();
+    </script>
 </body>
 </html>
