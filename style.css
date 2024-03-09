@@ -9,12 +9,6 @@ body, html {
     overflow-x: hidden;
 }
 
-.header {
-  position: relative;
-  z-index: 2;
-  background-color: black;
-}
-
 /* Hero Section */
 .hero {
     position: relative;
@@ -216,16 +210,6 @@ body, html {
     .container p {
     font-size: 18px;
     }
-
-    body {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-  }
-
-  /* Show scrollbar when scrolling */
-  body::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 /* Header */
@@ -234,7 +218,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: transparent;
     color: white;
 }
 
