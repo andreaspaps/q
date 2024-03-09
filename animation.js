@@ -33,7 +33,7 @@ function drawLetter() {
   for (let i = 0; i < 5; i++) {
     const x = Math.floor(Math.random() * canvas.width);
     const y = Math.floor(Math.random() * canvas.height);
-    const size = Math.floor(Math.random() * 30) + 10;
+    const size = Math.floor(Math.random() * 40) + 10;
     const speed = size / 20;
     const opacity = Math.random() * 1 + 0.7;
     const color = "rgba(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + opacity + ")";
