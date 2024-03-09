@@ -219,6 +219,16 @@ body, html {
     .container p {
     font-size: 18px;
     }
+
+    body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+  }
+
+  /* Show scrollbar when scrolling */
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Header */
@@ -299,6 +309,16 @@ footer .privacy-link {
     .container p {
         font-size: 20px; /* Adjusted font size for better readability */
     }
+
+    body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+  }
+
+  /* Show scrollbar when scrolling */
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Hide the default scrollbar */
