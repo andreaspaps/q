@@ -326,3 +326,15 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   background: transparent; /* Set scrollbar track color */
 }
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 50px; /* Adjust the gap between icons */
+    font-size: 50px;
+}
+
+.social-link i {
+    color: white;
+}
