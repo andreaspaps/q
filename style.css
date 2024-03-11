@@ -332,7 +332,7 @@ body::-webkit-scrollbar-track {
     justify-content: center;
     padding-top: 50px;
     gap: 50px; /* Adjust the gap between icons */
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .social-link i {
