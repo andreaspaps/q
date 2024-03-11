@@ -39,7 +39,7 @@ body, html {
     padding-top: 30px;
     padding-left: 250px;
     text-align: left;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 1.5s ease;
     height: 600px;
 }
 
