@@ -30,7 +30,7 @@ window.addEventListener('resize', resizeCanvas);
 
 function drawLetter() {
   // Increase the loop frequency by calling the function more frequently
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 2; i++) {
     const x = Math.floor(Math.random() * canvas.width);
     const y = Math.floor(Math.random() * canvas.height);
     const size = Math.floor(Math.random() * 40) + 10;
