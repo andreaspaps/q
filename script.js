@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }, {
-      rootMargin: "100px" // Load a bit before the element is in view
+      rootMargin: "900px" // Load a bit before the element is in view
     });
     
     observer.observe(document.getElementById('youtube-placeholder'));
