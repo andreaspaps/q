@@ -157,12 +157,37 @@ body, html {
     padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%) */
 }
 
+.youtube-player img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    z-index: 1; /* Ensure the image appears above the YouTube iframe */
+}
+
 .youtube-player iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0; /* Ensure the YouTube iframe appears below the placeholder image */
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red; /* YouTube red color */
+    z-index: 1; /* Ensure the icon appears above other elements */
+    transition: transform 0.2s ease-in-out; /* Add transition effect */
+}
+
+.play-icon:hover {
+    transform: translate(-50%, -50%) scale(1.2); /* Scale up on hover */
 }
 
 /* Responsive Adjustments */
